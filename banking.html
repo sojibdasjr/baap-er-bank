@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Page</title>
+    <!-- tailwind Css Cnd link -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- fontAwesome link -->
+    <script src="https://kit.fontawesome.com/615190272e.js" crossorigin="anonymous"></script>
+
+    <!-- custom css -->
+    <style>
+        .error{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-16">Let's Get Some <span class="font-bold text-pink-600 ">Mooooooney !!!</span></h1>
+    </header>
+    
+    <main class="mx-auto w-3/4">
+        <!-- Balance Transgation -->
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 text-white">
+                <div class="bg-blue-300 p-8 rounded  text-center">
+                    <h3 class="text-4xl">Deposit</h3>
+                    <h2  class="text-6xl">$<span id="deposit-total">000</span></h2>
+                </div>
+                <div class="bg-yellow-300 p-8 rounded  text-center">
+                    <h3 class="text-4xl">Withdrow</h3>
+                    <h2 class="text-6xl">$ <span id="withdrow-total">000</span></h2>
+                </div>
+                <div class="bg-green-300 p-8 rounded  text-center">
+                    <h3 class="text-4xl">Balance</h3>
+                    <h2 class="text-6xl">$<span id="balance-input">1200</span> </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deposit and Withdrow -->
+        <section class="grid grid-cols-2 gap-4 mt-8 ">
+            <div class="bg-red-100 p-8 rounded">
+                <h3 class="text-2xl font-bold">Please Deposit <i class="fas fa-money-check-alt text-blue-500"></i></h3>
+                <input id="deposit-input" class=" block my-2 rounded p-2 border-2 border-gray-400 " type="text"  placeholder="$ Deposit amound">
+                <p id="deposit-error" class="text-red-500 py-1 error">Error!! Please Use Valid Number</p>
+
+                <button id="deposit-button" class="bg-yellow-500 p-2 px-4 rounded font-bold text-white">Deposit</button>
+            </div>
+            <div class="bg-pink-200 p-8 rounded">
+                <h3 class="text-2xl font-bold">Please Withdrow</h3>
+                <input id="withdrow-input" class=" block my-2 rounded p-2 border-2 border-gray-400 " type="text"  placeholder="$ Withdrow amound">
+                <p id="withdrow-error" class="text-red-500 py-1 error">Error!! Please Use Valid Number</p> 
+
+                <button id="withdrow-button" class="bg-yellow-500 p-2 px-4 rounded font-bold text-white">Withdrow</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="java-script/banking.js"></script>
+</body>
+</html>
